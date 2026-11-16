@@ -1,12 +1,14 @@
 # Exact committee decisions with fewer approval questions
 
-**Start with the [latest experiment and proof](BINARY_QUERY_RESULTS.md).** Run the replays with Python 3.12 and the [pinned NumPy dependency](requirements.txt).
+**Start with the [exact separation](BINARY_QUERY_RESULTS.md) and [two-question follow-up](LOOKAHEAD_RESULTS.md).** Run the replays with Python 3.12 and the [pinned NumPy dependency](requirements.txt).
 
 A paper-linked voting project for Martin Bullinger's **Algorithms for Collective Decision Making: Voting and Coalition Formation**. A community panel chooses three of seven proposals. We compare the cost of certifying the exact proportional approval voting (PAV) committee when voters' approval bits are available one at a time. This separates the voting rule from the process used to gather its input. [Advert and research notes](SUPERVISOR_NOTES.md).
 
 **Approval totals changed the cost more than a tighter mathematical bound.** On 96 clustered profiles, asking each voter for their approval total reduced mean response burden from **148.93 to 128.36**, counting all 22 numeric answers. The paired reduction was **20.56 answers**, with a 95% interval of **[19.22, 21.92]**. This was a prespecified secondary comparison. The primary comparison found only **1.03** binary answers saved by exact margins over separate score intervals on the same transcript. Its 95% interval was **[0.68, 1.41]** and its practical threshold was **6.16**. Every certified committee matched the full-ballot result. [Frozen protocol](PROTOCOL.md) · [Complete outcomes](results.json).
 
 **Equal-bandwidth follow-up.** A question about whether a voter approves at most a specified number also has just one yes/no answer. We derived a tight interval-count certificate and proved that the mixed interface reduces the exact optimum from 36 to 24 questions on a concrete profile. The measured savings did not carry across clustered and historical ballot projections under our matched active selectors. [Follow-up and replay](BINARY_QUERY_RESULTS.md).
+
+**Two-question planning.** Optimising the second question conditional on the first reply still yielded little average benefit from threshold questions on 120 fresh clustered profiles. The matched two-step mixed interface saved −0.34 answers on average, with a 95% interval of −1.08 to +0.41. Every policy run certified the correct committee. [Matched policies and robustness checks](LOOKAHEAD_RESULTS.md).
 
 ## What the certificate proves
 
