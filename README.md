@@ -63,3 +63,5 @@ OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python voting.py --data-dir "$vo
 ```
 
 An independent enumerator checked **4,040** complete profiles across 96 small partial profiles and tested each of their 288 row states against the formula. The deterministic full replay covers 240 generated profiles and 60 resamples of public ballots. A natural next question for Bullinger is whether the value of this approval-count interface survives nonresponse or unequal query costs across voters. Both changes require revisiting the exact completion assumptions. [Supervisor reading notes](SUPERVISOR_NOTES.md).
+
+The [robustness follow-up](robust-certificate/REPORT.md) permits a shared budget of incorrect approval reports and distinguishes outcome changes from utility-improving single-bit deviations.
